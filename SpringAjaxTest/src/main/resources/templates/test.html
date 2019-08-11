@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:s="http://www.springframework.org/tags"
+	 >
+<head>
+<meta charset="utf-8" />
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+	  
+	  //alert('JQuery is ready');
+	  
+	  $("#get_time").click(function(){
+		  
+		//  alert('Button function OK.');
+		  $.ajax({
+			  
+			  url : 'get_time',
+			  success : function(data){
+				  $("#id_time").html(data);
+			  }
+			  
+		  });
+	  });
+	  
+  });
+</script>
+<title>Page de test AJAX</title>
+</head>
+
+<body>
+
+
+<h1>AJAX TEST PAGE</h1>
+<button id="get_time">Get Server Time</button><br/>
+<p id="id_time"></p>
+
+
+</body>
+
+</html>
