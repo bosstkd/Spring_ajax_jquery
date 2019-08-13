@@ -7,6 +7,9 @@
 <meta charset="utf-8" />
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
 <title>Page de test AJAX</title>
 </head>
 
@@ -14,10 +17,11 @@
 
 
 <h1>AJAX TEST PAGE</h1>
-<button id="get_time">Get Server Time</button>
-<button id="say_hello">dit bonjour</button>
+<button id="R_get_time" class="ajaxiser">Get Server Time</button>
+<button id="say_hello" class="ajaxiser">dit bonjour</button><br/><p/><br/>
+<a th:href="@{/}" class="w3-button w3-black">Return to last page</a>
 <br/>
-<p id="get_time_response"></p>
+<p id="R_get_time_response"></p>
 <p id="say_hello_response"></p>
 
 <script src="/js/firstAjaxScript.js"> </script>
